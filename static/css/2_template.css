@@ -1,0 +1,78 @@
+#main
+{
+	width:1100px;
+	height:auto;
+	margin:0 auto;
+}
+#wrapper
+{
+	width:1100px;
+	height:auto;
+	float:left;
+	box-shadow:0px 0px 20px #66CC66; 	
+}
+#banner
+{
+	width:1100px;
+	height:150px;
+	float:left;
+	background-color:#069;
+}
+#menu
+{
+	width:1100px;
+	height:32px;
+	float:left;
+	background-color:#90C;
+	padding-top:15px;	
+}
+
+#menu a
+{
+	color:#fff;
+	font-family:arial;
+	text-decoration:none;
+	padding:15px 40px 15px 40px;
+}
+#menu a:hover
+{
+	color:#c36;
+	background-color:#9FF;
+}
+
+
+#middle
+{
+	width:1100px;
+	min-height:400px;
+	float:left;	
+}
+#content
+{
+	width:783px;
+	min-height:400px;
+	float:left;
+	border:1px solid #000;
+	margin-left:10px;
+	margin-bottom:10px;
+	margin-top:10px;
+		
+}
+#ad
+{
+	width:283px;
+	min-height:400px;
+	float:right;
+	border:1px solid #000;
+	margin-right:10px;
+	margin-bottom:10px;
+	margin-top:10px;		
+}
+#bottom
+{
+	width:1100px;
+	height:250px;
+	background-color:#93F;
+	float:left	
+}
+

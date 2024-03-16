@@ -1,0 +1,23 @@
+<h1>DELETE MEDICAL Data</h1>
+{% if vgt %}
+    {{vgt}}
+
+
+    <form method="post" action="delete_medical1">
+        <p>Name<input readonly value="{{vgt[0]}}" type="text" name="T1" id="txt1" /> </p>
+        <p>Owner<input readonly value="{{vgt[1]}}" type="text" name="T2" id="txt2" /> </p>
+        <p>liscense no<input readonly value="{{vgt[2]}}" type="text" name="T3" id="txt3" /> </p>
+        <p>address<input readonly value="{{vgt[3]}}" type="text" name="T4" id="txt4" /> </p>
+        <p>landmark<input readonly value="{{vgt[4]}}" type="text" name="T5" id="txt5" /> </p>
+        <p>contact<input readonly value="{{vgt[5]}}" type="text" name="T6" id="txt6" /> </p>
+        <p>email<input readonly value="{{vgt[6]}}" type="text" name="T7" id="txt7" /> </p>
+
+        <p><button type="submit">DELETE</button> </p>
+    </form>
+
+    <h3><a href="show_medical">Back</a> </h3>
+
+
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}

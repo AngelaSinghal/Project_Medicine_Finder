@@ -1,0 +1,38 @@
+{% extends 'admin_template.html' %}
+{% block m1 %}
+
+
+<h1>SHOW MEDICAL DATA</h1>
+{% if vgt %}
+    {% for d in vgt %}
+        <h3>Name:{{d[0]}}</h3>
+        <p>
+            owner:{{d[1]}}<br/>
+            liscense no:{{d[2]}}<br/>
+            address:{{d[3]}}<br/>
+            landmark:{{d[4]}}<br/>
+            contact:{{d[5]}}<br/>
+            email:{{d[6]}}
+        </p>
+        <table>
+        <tr>
+            <td>
+            <form method="post" action="edit_medical">
+                <input type="hidden" name="H1" value="{{d[6]}}">
+                <input type="submit" name="B1" VALUE="EDIT">
+            </form>
+                </td>
+            <td>
+            <form method="post" action="delete_medical">
+                <input type="hidden" name="H1" value="{{d[6]}}">
+                <input type="submit" name="B1" VALUE="DELETE">
+            </form>
+            </td>
+        </tr>
+            </table>
+    {% endfor %}
+
+    {% elif msg %}
+        <h3>{{msg}}</h3>
+{% endif %}
+{% endblock %}

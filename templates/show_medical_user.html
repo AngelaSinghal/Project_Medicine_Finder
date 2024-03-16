@@ -1,0 +1,44 @@
+{% extends 'login_template.html' %}
+{% block m1 %}
+
+
+<h1>SHOW MEDICAL DATA</h1>
+{% if vgt %}
+    {% for d in vgt %}
+        <h3>Name:{{d[0]}}</h3>
+        <p>
+            Owner : {{d[1]}}
+            Liscense no : {{d[2]}}
+            Address : {{d[3]}}
+            Landmark : {{d[4]}}
+            Contact : {{d[5]}}
+            Email : {{d[6]}}
+        </p>
+
+    {% endfor %}
+    <table border="1" width="100%">
+        <tr>
+            <th>NAME</th>
+            <th>OWNER</th>
+            <th>LISCENSE NO</th>
+            <th>ADDRESS</th>
+            <th>LANDMARK</th>
+            <th>CONTACT</th>
+            <th>EMAIL</th>
+        </tr>
+        {% for d in vgt %}
+            <tr>
+                <td>{{d[0]}}</td>
+                <td>{{d[1]}}</td>
+                <td>{{d[2]}}</td>
+                <td>{{d[3]}}</td>
+                <td>{{d[4]}}</td>
+                <td>{{d[5]}}</td>
+                <td>{{d[6]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% elif msg %}
+        <h3>{{msg}}</h3>
+{% endif %}
+{% endblock %}

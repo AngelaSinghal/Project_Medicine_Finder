@@ -1,0 +1,41 @@
+{% extends 'login_template.html' %}
+{% block m1 %}
+<h1>Find your medicine</h1>
+
+
+<form method="post" action="">
+    <p>Medicine
+        {% if nm %}
+        <input type="text" name="T1" value="{{nm}}" />
+        {% else %}
+        <input type="text" name="T1"/>
+        {% endif %}
+        <button type="submit">Search</button>
+    </p>
+</form>
+{% if data %}
+<table width="100%">
+    {% for d in data %}
+    <tr>
+        <td width="33%">
+            Name:{{d[8]}}<BR>
+            Company:{{d[9]}}<br>
+            Price:{{d[11]}}
+        </td>
+        <td width="33%">
+            Medical:{{d[0]}}<br>
+            Contact person:{{d[1]}}<br>
+            Contact:{{d[5]}}<br>
+            Address:{{d[3]}}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% elif msg %}
+<h3>{{msg}}</h3>
+{% endif %}
+
+
+
+
+{% endblock %}

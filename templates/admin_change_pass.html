@@ -1,0 +1,12 @@
+<h1>CHANGE PASSWORD</h1>
+<form method ="POST" action="change_pass_a">
+     <p>OLD PASSWORD<input type ="text" name="A"></p>
+     <p>NEW PASSWORD<input type ="text" name="B"></p>
+     <p>CONFIRM PASSWORD<input type ="text" name="C"></p>
+     <p> <input type="submit" name="B1" value="set new password"> </p>
+</form>
+<p><a href="/admin_home">back to home page</a></p>
+
+{% if msg %}
+    <h3>{{msg}}</h3>
+{% endif %}

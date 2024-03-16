@@ -1,0 +1,15 @@
+{% extends 'login_template.html' %}
+{% block m1 %}
+
+<h1>SIGN IN</h1>
+<form method="POST" action="login">
+    <p>EMAIL<input type ="text" name="T1"></p>
+    <p>PASSWORD<input type ="text" name="T2"></p>
+    <p><button type="submit">Login</button> </p>
+</form>
+
+{% if msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}
