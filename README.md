@@ -1,5 +1,4 @@
 # Project_Medicine_Finder
-I'd be glad to create a comprehensive README file for your Flask-based medical store application:
 
 ## medical_store_finder
 
